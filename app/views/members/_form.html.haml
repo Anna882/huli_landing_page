@@ -1,0 +1,14 @@
+.container-fluid
+  = form_for @member do |f|
+    .form-group
+      .form-control.form-control-lg
+        = f.label :name
+        .col-md-8
+          .form-control.form-control-md
+            = f.text_field :name
+        = f.label :team_id
+        .form-control
+          .col-md-8
+            = f.select(:team_id, @teams.map {|t| [ t.name, t.id ] }, {include_blank: '------------Select team----------'})
+        = f.submit
+

@@ -1,7 +1,13 @@
-%nav.navbar.navbar-default
+%h4
   .container-fluid
-    .navbar-header
-      %a.navbar-brand{:href => "#"} Huli Landing Page
-      = link_to "Projects", projects_path
-      = link_to "Teams"
-      = link_to "Add new Project", new_project_path
+    .navbar.navbar-expand-sm.bg-dark.navbar-light
+      .navbar-nav
+        .nav-item
+          .nav-link
+            = link_to "Huli Landing Page", root_path
+            = link_to "Projects", projects_path
+            = link_to "Teams", teams_path
+            = link_to "Apprentices", members_path
+            = link_to "Add new Team", new_team_path
+            = link_to "Add new Project", new_project_path
+            = link_to "Add new Member", new_member_path
